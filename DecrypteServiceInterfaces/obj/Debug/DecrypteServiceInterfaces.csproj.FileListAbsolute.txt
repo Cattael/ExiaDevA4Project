@@ -1,0 +1,6 @@
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\bin\Debug\DecrypteServiceInterfaces.dll
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\bin\Debug\DecrypteServiceInterfaces.pdb
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.csprojAssemblyReference.cache
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.dll
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.pdb

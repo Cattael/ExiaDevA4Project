@@ -1,0 +1,10 @@
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\bin\Debug\DecrypteService.exe.config
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\bin\Debug\DecrypteService.exe
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\bin\Debug\DecrypteService.pdb
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\bin\Debug\DecrypteServiceInterfaces.dll
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\bin\Debug\DecrypteServiceInterfaces.pdb
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.csprojAssemblyReference.cache
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.csproj.CoreCompileInputs.cache
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.csproj.CopyComplete
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.exe
+C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.pdb
