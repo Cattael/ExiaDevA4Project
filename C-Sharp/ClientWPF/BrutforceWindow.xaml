@@ -1,0 +1,25 @@
+﻿<Window x:Class="ClientWPF.BrutforceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientWPF"
+        mc:Ignorable="d"
+        Title="BrutforceWindow" Height="450" Width="693.46" ResizeMode="NoResize" Closing="Window_Closing">
+    <Grid Margin="0,0,2,-1">
+        <Label Name="felrkfj" Content="Files add :" Margin="24,75,525,311"/>
+        <Label x:Name="label1" Content="Decrypt window :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="40" Width="197" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.821,0.621"/>
+        <Button Name="Browse" Content="Browse files" Margin="24,55,560,337" Click="Browse_Click"/>
+        <Button Name="Delete" Content="Delete" Margin="130,55,478,337" Click="DeleteFile_Click"/>
+        <ListBox Name="listFiles" Margin="24,102,33,198">
+            
+        </ListBox>
+
+        <Button x:Name="Exec" Content="Launch" Margin="24,220,341,168" Click="Exec_Click"/>
+        <Label Name="pourcent" Content="0%" Margin="615,284,24,103"/>
+        <Button x:Name="Cancel" Content="Cancel" Margin="518,220,33,168"/>
+        <Label Name="label2" Content="Brutforce Progress :" Margin="24,254,525,133"/>
+        <ProgressBar Margin="24,285,73,106"/>
+        <Button x:Name="Seeresult" Content="Result" IsEnabled="False" Margin="242,349,242,28"/>
+    </Grid>
+</Window>

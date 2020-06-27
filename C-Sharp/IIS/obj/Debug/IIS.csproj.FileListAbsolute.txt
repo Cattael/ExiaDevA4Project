@@ -1,0 +1,7 @@
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\IIS\bin\IIS.dll.config
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\IIS\bin\IIS.dll
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\IIS\bin\IIS.pdb
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\IIS\obj\Debug\IIS.csprojAssemblyReference.cache
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\IIS\obj\Debug\IIS.csproj.CoreCompileInputs.cache
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\IIS\obj\Debug\IIS.dll
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\IIS\obj\Debug\IIS.pdb

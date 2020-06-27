@@ -33,6 +33,11 @@ namespace DecrypteService
             return ""; 
         }
 
+        public void getFiles(string file)
+        {
+                Console.WriteLine(file + "\n");
+        }
+
         public bool isAuthenticated(string username, string token)
         {
             return BDDConnection.CheckTokenUser(username, token); 

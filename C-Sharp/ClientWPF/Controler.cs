@@ -1,11 +1,13 @@
 ﻿using DecrypteServiceInterfaces;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace ClientWPF
 {
@@ -30,19 +32,52 @@ namespace ClientWPF
             if (token == "") MessageBox.Show("User or password invalid");
         }
 
-        public void CheckAuthentication()
+        public bool CheckAuthentication()
         {
             if (string.IsNullOrWhiteSpace(username))
             {
-                MessageBox.Show("You are not athentificated...");
+                return false; 
             }
             if (proxy.isAuthenticated(username, token))
             {
-                MessageBox.Show("You're correctly authenticated"); 
+                return true; 
             }
             else
             {
-                MessageBox.Show("You are not athentificated...");
+                return false;
+            }
+        }
+
+        public void LaunchDecrypt(ItemCollection items)
+        {
+            if (items is null || items.Count < 1)
+            {
+                MessageBox.Show("No File to decrypt");
+                return;
+            }
+            string[] paths = new string[items.Count];
+            for(int i = 0; i < items.Count; i++)
+            {
+                paths[i] = (string)items.GetItemAt(i);
+            }
+
+            string[] filesContent = new string[items.Count];
+
+            for (int i = 0; i < paths.Length; i ++)
+            {
+                StringBuilder sb = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<file>\n<name>" + Path.GetFileName(paths[i]) + "</name>\n<body>\n" ); 
+                StreamReader sr = new StreamReader(paths[i]);
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    sb.Append(line);
+                }
+                sb.Append("\n</body>\n</file>");
+                filesContent[i] = sb.ToString(); 
+            }
+            foreach (var file in filesContent)
+            {
+                proxy.getFiles(file);
             }
         }
     }

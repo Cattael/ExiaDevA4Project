@@ -8,3 +8,13 @@ C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\Decr
 C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.csproj.CopyComplete
 C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.exe
 C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteService\obj\Debug\DecrypteService.pdb
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\bin\Debug\DecrypteService.exe.config
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\bin\Debug\DecrypteService.exe
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\bin\Debug\DecrypteService.pdb
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\bin\Debug\DecrypteServiceInterfaces.dll
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\bin\Debug\DecrypteServiceInterfaces.pdb
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\obj\Debug\DecrypteService.csprojAssemblyReference.cache
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\obj\Debug\DecrypteService.csproj.CoreCompileInputs.cache
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\obj\Debug\DecrypteService.csproj.CopyComplete
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\obj\Debug\DecrypteService.exe
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteService\obj\Debug\DecrypteService.pdb

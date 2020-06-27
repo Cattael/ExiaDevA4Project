@@ -4,3 +4,9 @@ C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\
 C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.csproj.CoreCompileInputs.cache
 C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.dll
 C:\Users\nicol\source\repos\DecrypteServiceProjet\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.pdb
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteServiceInterfaces\bin\Debug\DecrypteServiceInterfaces.dll
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteServiceInterfaces\bin\Debug\DecrypteServiceInterfaces.pdb
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.csprojAssemblyReference.cache
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.csproj.CoreCompileInputs.cache
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.dll
+F:\VisualStudio\DecrypteServiceProjet\C-Sharp\DecrypteServiceInterfaces\obj\Debug\DecrypteServiceInterfaces.pdb
