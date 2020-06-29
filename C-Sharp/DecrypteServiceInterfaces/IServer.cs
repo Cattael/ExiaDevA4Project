@@ -14,9 +14,9 @@ namespace DecrypteServiceInterfaces
         [OperationContract]
         string Connect(string username, string password);
         [OperationContract]
-        bool isAuthenticated(string username, string token);
+        bool isAuthenticated(string token);
         [OperationContract]
-        void getFiles(string file);
+        void sendFiles(string file, string tokenUser);
 
     }
 }

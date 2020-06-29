@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDDConnection.cs" />
+    <Compile Include="Decrypter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="TokenGen.cs" />
     <Compile Include="User.cs" />

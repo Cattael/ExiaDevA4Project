@@ -38,7 +38,7 @@ namespace ClientWPF
             {
                 return false; 
             }
-            if (proxy.isAuthenticated(username, token))
+            if (proxy.isAuthenticated(token))
             {
                 return true; 
             }
@@ -65,19 +65,19 @@ namespace ClientWPF
 
             for (int i = 0; i < paths.Length; i ++)
             {
-                StringBuilder sb = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<file>\n<name>" + Path.GetFileName(paths[i]) + "</name>\n<body>\n" ); 
+                StringBuilder sb = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<file>\n<name>" + Path.GetFileName(paths[i]) + "</name>\n<body>" ); 
                 StreamReader sr = new StreamReader(paths[i]);
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
                     sb.Append(line);
                 }
-                sb.Append("\n</body>\n</file>");
+                sb.Append("</body>\n</file>");
                 filesContent[i] = sb.ToString(); 
             }
             foreach (var file in filesContent)
             {
-                proxy.getFiles(file);
+                proxy.sendFiles(file, this.token);
             }
         }
     }

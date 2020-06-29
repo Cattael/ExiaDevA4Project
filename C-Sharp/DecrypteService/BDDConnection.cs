@@ -40,12 +40,19 @@ namespace DecrypteService
             cmd.Dispose();
             return output;
         }
-        public static bool CheckTokenUser(string username, string token)
+        public static bool CheckTokenUser(string token)
         {
-            User user = getUserInfo(username); 
-            if (user.Token == token)
-                return true; 
-            return false; 
+            bool output = false; 
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "Select * FROM Accounts WHERE Token='" + token+ "';";
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                output = true; 
+            }
+            dr.Close();
+            cmd.Dispose();
+            return output; 
         }
 
         public static int getUserID(string username)
@@ -77,6 +84,18 @@ namespace DecrypteService
             return user; 
         }
 
+        public static User getUserInfoByToken(string token)
+        {
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "Select ID, Username, Token, Last  FROM Accounts WHERE Token='" + token + "';";
+            SqlDataReader dr = cmd.ExecuteReader();
+            dr.Read();
+            User user = new User() { ID = (int)dr.GetValue(0), Username = dr.GetValue(1).ToString(), Token = dr.GetValue(2).ToString(), Last = DateTime.Parse(dr.GetValue(3).ToString()), };
+            dr.Close();
+            cmd.Dispose();
+            return user;
+        }
+
         public static bool UserPasswordExist(string username, string password)
         {
             SqlCommand cmd = connection.CreateCommand();
@@ -86,6 +105,11 @@ namespace DecrypteService
             cmd.Dispose();
             dr.Close(); 
             return output;
+        }
+
+        public static void RegisterRequest(string token, string email)
+        {
+            ExeSqlQuery("INSERT INTO Requests VALUES('"); 
         }
 
         public static void AddApp(string name, DateTime expDate)
