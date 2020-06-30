@@ -49,6 +49,14 @@ public class DecryptServiceBean implements DecryptServiceEndPointInterface  {
     private  Filees filees = new Filees();
     
     
+    private String xml = "plop";
+    
+    
+    
+    
+    
+    
+    
     @Override
     public Boolean postFiles(String[][] files, String token) 
     {
@@ -93,37 +101,14 @@ public class DecryptServiceBean implements DecryptServiceEndPointInterface  {
             jaxbMarshaller.marshal(filees, writer);
             
             
-            
             String xmlMessage = writer.toString();
             //affichage du XML dans la console de sortie
             System.out.println(xmlMessage);
           
-           
-            
-
             TextMessage msg = context.createTextMessage(xmlMessage);
-            
-             unMarshalingExample(xmlMessage);
-            
+         
             //envoi du message dans la queue paymentQueue
             context.createProducer().send(paymentQueue, msg);
     }
-
-    private void unMarshalingExample(String xmlMessage) throws JAXBException 
-    {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Filees.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        StringReader reader = new StringReader(xmlMessage);
-        System.out.print(xmlMessage);
-            
-        Filees emps = (Filees) jaxbUnmarshaller.unmarshal(reader);
-        
-        emps.getFilees();
-        
-        
-        System.out.print(emps.getFilees().get(0).getContent());
-        
-    }
-
 
 }

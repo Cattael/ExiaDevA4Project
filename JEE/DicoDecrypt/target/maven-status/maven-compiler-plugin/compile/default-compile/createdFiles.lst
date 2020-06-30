@@ -1,4 +1,6 @@
-com\bank\dicodecrypt\NewSessionBean.class
 com\bank\dicodecrypt\ConnectDB.class
 com\bank\dicodecrypt\DicoProcessor.class
 com\bank\dicodecrypt\Compare.class
+com\bank\dicodecrypt\NewSessionBean.class
+com\bank\unmarshaller\File.class
+com\bank\unmarshaller\Filees.class
