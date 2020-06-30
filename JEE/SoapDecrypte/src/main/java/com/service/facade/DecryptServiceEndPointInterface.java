@@ -21,6 +21,6 @@ public interface DecryptServiceEndPointInterface
      @WebMethod(operationName = "DecryptOperation")
      @WebResult(name = "acceptedDecrypt")
 
-     Boolean postFiles(@WebParam(name="FileDecrypt") String[][] files, @WebParam(name="Token") String Token);
+     Boolean postFiles(@WebParam(name="xml") String xml);
      
 }

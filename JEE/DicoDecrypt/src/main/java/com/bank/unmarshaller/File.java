@@ -1,11 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.bank.unmarshaller;
-
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,11 +10,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class File implements Serializable{
     
+    
+    @XmlAttribute
+     private String token;
+    
+    
+     @XmlAttribute
+     private String name;
+    
     @XmlElement
     private String content;
 
     @XmlElement
-    private String title;
+    private String key;
 
    
     
@@ -34,13 +35,31 @@ public class File implements Serializable{
     }
     
        
-    public String getTitle() {
-        return title;
+    public String getKey() {
+        return key;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setKey(String key) {
+        this.key = key;
     }
+    
+    
+      public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+    
+       public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
 
     

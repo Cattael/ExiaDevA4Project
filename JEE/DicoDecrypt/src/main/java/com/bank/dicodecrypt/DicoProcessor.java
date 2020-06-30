@@ -1,5 +1,6 @@
 package com.bank.dicodecrypt;
 
+import com.bank.unmarshaller.File;
 import com.bank.unmarshaller.Filees;
 import java.io.StringReader;
 import javax.ejb.ActivationConfigProperty;
@@ -35,9 +36,7 @@ public class DicoProcessor implements MessageListener {
     @Override
     public void onMessage(Message message) {
         
- 
                 try {
-                    
                     
                     TextMessage textMessage = (TextMessage) message;
                     String text = textMessage.getText();
@@ -45,9 +44,10 @@ public class DicoProcessor implements MessageListener {
                     System.out.print(text);
                     System.out.print("plop");
                     try {
-                        unMarshalingExample(text);
-                        /*
-                        try {
+                        
+                         unMarshalingExample(text);
+                        
+                       /* try {
                         
                         if (message instanceof BytesMessage) {
                         
@@ -99,16 +99,14 @@ public class DicoProcessor implements MessageListener {
 
     private void unMarshalingExample(String xmlMessage) throws JAXBException 
     {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Filees.class);
+        JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         StringReader reader = new StringReader(xmlMessage);
         System.out.print(xmlMessage);
             
-        Filees emps = (Filees) jaxbUnmarshaller.unmarshal(reader);
+        File emps = (File) jaxbUnmarshaller.unmarshal(reader);
         
-  
-       
-        System.out.print(emps.getFilees().get(0).getContent());
+        System.out.print(emps.getContent());
         
     }
 }
