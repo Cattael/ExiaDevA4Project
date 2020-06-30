@@ -1,0 +1,7 @@
+C:\Users\coren\source\repos\A4TestMyWebService\A4WebServiceClient\bin\Debug\A4WebServiceClient.exe.config
+C:\Users\coren\source\repos\A4TestMyWebService\A4WebServiceClient\bin\Debug\A4WebServiceClient.exe
+C:\Users\coren\source\repos\A4TestMyWebService\A4WebServiceClient\bin\Debug\A4WebServiceClient.pdb
+C:\Users\coren\source\repos\A4TestMyWebService\A4WebServiceClient\obj\Debug\A4WebServiceClient.csprojAssemblyReference.cache
+C:\Users\coren\source\repos\A4TestMyWebService\A4WebServiceClient\obj\Debug\A4WebServiceClient.csproj.CoreCompileInputs.cache
+C:\Users\coren\source\repos\A4TestMyWebService\A4WebServiceClient\obj\Debug\A4WebServiceClient.exe
+C:\Users\coren\source\repos\A4TestMyWebService\A4WebServiceClient\obj\Debug\A4WebServiceClient.pdb

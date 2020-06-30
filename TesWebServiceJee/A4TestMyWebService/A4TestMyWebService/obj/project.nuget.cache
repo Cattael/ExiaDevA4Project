@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "DLhrh/BNbN4QrKHPIqgitGrTH4OKVxFYWM5pL7nvSBCwRYbTJOvNLkj2gyHOPD6cc1e6DDWEg83u0/VWu+oAnw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\coren\\source\\repos\\A4TestMyWebService\\A4TestMyWebService\\A4TestMyWebService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\coren\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

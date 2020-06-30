@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://facade.service.com/" xmlns:ns1="http://jaxb.dev.java.net/array" targetNamespace="http://facade.service.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9080/DecryptService/DecryptServiceBean?xsd=1" namespace="http://jaxb.dev.java.net/array" />
+  <xs:element name="DecryptOperation" type="tns:DecryptOperation" />
+  <xs:element name="DecryptOperationResponse" type="tns:DecryptOperationResponse" />
+  <xs:complexType name="DecryptOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileDecrypt" nillable="true" type="ns1:stringArray" />
+      <xs:element minOccurs="0" name="Token" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DecryptOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acceptedDecrypt" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
