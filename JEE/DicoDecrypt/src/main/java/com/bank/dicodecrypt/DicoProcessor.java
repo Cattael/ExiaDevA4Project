@@ -11,6 +11,7 @@ import javax.jms.TextMessage;
 import javax.jms.BytesMessage;
 import javax.jms.JMSException;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -105,7 +106,10 @@ public class DicoProcessor implements MessageListener {
         System.out.print(xmlMessage);
             
         File emps = (File) jaxbUnmarshaller.unmarshal(reader);
-        
+        		
+        byte[] decodedBytes = Base64.getDecoder().decode(emps.getContent());
+        String decodedString = new String(decodedBytes);
+        emps.setContent(decodedString);
         System.out.print(emps.getContent());
         
     }
