@@ -48,20 +48,15 @@ public class DecryptServiceBean implements DecryptServiceEndPointInterface  {
     
    // private  Filees filees = new Filees();
     
+
     
-    private File  fichier = new File();
-    
-    private String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><file token=\"AAAA4515gezgegezgAGEZZG\" name=\"plop.txt\"><content>$a26(2a/$a'*\")(&amp;3as</content><key>AAAA</key></file>";
+    private String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><file token=\"LXRIPMFUOSKGCHD\" name=\"2.txt\"><content>HS9jMCIjMGM7L2MlPikrKjI4Y3E=</content><key>WJCC</key></file>";
     
     
     public Boolean postFiles(String xmlMessage) 
     {
        
-        //fichier simuler
-        fichier.setContent("test gzgzg zgzg");
-        fichier.setName("plop.txt");
-        fichier.setKey("AAAA");
-        fichier.setToken("AAAA4515gezgegezgAGEZZG");
+
         
          try {
              sendJMSFiles(xmlMessage);

@@ -46,7 +46,7 @@ public class DicoProcessor implements MessageListener {
                     System.out.print("plop");
                     try {
                         
-                         unMarshalingExample(text);
+                         unMarshaling(text);
                         
                        /* try {
                         
@@ -98,7 +98,7 @@ public class DicoProcessor implements MessageListener {
 	}
 
 
-    private void unMarshalingExample(String xmlMessage) throws JAXBException 
+    private void unMarshaling(String xmlMessage) throws JAXBException 
     {
         JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();

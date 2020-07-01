@@ -23,6 +23,12 @@ public class File implements Serializable{
 
     @XmlElement
     private String key;
+    
+    @XmlElement
+    private int probability;
+
+    @XmlElement
+    private String secretinfo;
 
    
     
@@ -59,6 +65,25 @@ public class File implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
+    
+    public int getProbability() {
+        return probability;
+    }
+
+    public void setProbability(int probability) {
+        this.probability = probability;
+    }
+    
+        public String getSecretinfo() {
+        return secretinfo;
+    }
+
+    public void setSecretinfo(String secretinfo) {
+        this.secretinfo = secretinfo;
+    }
+
+
+
 
 
 
