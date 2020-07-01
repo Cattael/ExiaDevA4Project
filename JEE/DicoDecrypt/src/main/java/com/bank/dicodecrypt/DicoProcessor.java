@@ -3,6 +3,7 @@ package com.bank.dicodecrypt;
 import com.bank.unmarshaller.File;
 import com.bank.unmarshaller.Filees;
 import java.io.StringReader;
+import java.io.StringWriter;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.jms.Message;
@@ -17,6 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 
@@ -38,12 +40,9 @@ public class DicoProcessor implements MessageListener {
     public void onMessage(Message message) {
         
                 try {
-                    
                     TextMessage textMessage = (TextMessage) message;
-                    String text = textMessage.getText();
-                    
+                    String text = textMessage.getText();  
                     System.out.print(text);
-                    System.out.print("plop");
                     try {
                         
                          unMarshaling(text);
@@ -113,6 +112,20 @@ public class DicoProcessor implements MessageListener {
         System.out.print(emps.getContent());
         
     }
+    
+    private String Marshaling(File file) throws JAXBException 
+    {
+             JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
+            //création d'un Marshaller pour transfomer l'objet Java en flux XML
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            StringWriter writer = new StringWriter();
+            
+            //transformation de l'objet en flux XML stocké dans un Writer
+            jaxbMarshaller.marshal(file, writer);
+            String xmlMessage = writer.toString();
+            return xmlMessage;
+    }
+
 }
     
 

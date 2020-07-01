@@ -94,13 +94,7 @@ public class DecryptServiceBean implements DecryptServiceEndPointInterface  {
             
             context.createProducer().send(paymentQueue, msg);
             
-       /* JAXBContext jaxbContext = JAXBContext.newInstance(Filees.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        StringReader reader = new StringReader(message);
-        System.out.print(message);   
-        File emps = (File) jaxbUnmarshaller.unmarshal(reader);
-        
-        System.out.print(emps.getName());*/
+   
         
         
     }
