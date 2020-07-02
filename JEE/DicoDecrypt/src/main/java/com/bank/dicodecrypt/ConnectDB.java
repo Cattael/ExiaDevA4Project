@@ -25,7 +25,7 @@ import java.io.IOException;
  */
 public class ConnectDB {
 	private Connection connection;
-        private static final String FILENAME1 = "E:\\liste_francais.txt";
+        private static final String FILENAME1 = "E:\\repProjet\\ExiaDevA4Project\\JEE\\DicoDecrypt\\src\\main\\java\\com\\bank\\dicodecrypt\\liste_francais.txt";
 
 	
 	public ConnectDB(){
@@ -65,7 +65,6 @@ public class ConnectDB {
 		String line;
 		BufferedReader bufferedreader = null;
 		FileReader filereader = null;
-		System.out.println(filename);
 		try {
 			filereader = new FileReader(filename);
 			bufferedreader = new BufferedReader(filereader);

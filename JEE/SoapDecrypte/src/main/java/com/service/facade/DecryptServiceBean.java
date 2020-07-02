@@ -46,29 +46,26 @@ public class DecryptServiceBean implements DecryptServiceEndPointInterface  {
     private Queue paymentQueue; //paquetage javax.jms
     
     
-    private  Filees filees = new Filees();
+   // private  Filees filees = new Filees();
+    
+
+    
+    private String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><file token=\"LXRIPMFUOSKGCHD\" name=\"2.txt\"><content>HS9jMCIjMGM7L2MlPikrKjI4Y3E=</content><key>WJCC</key></file>";
     
     
-    @Override
-    public Boolean postFiles(String[][] files, String token) 
+    public Boolean postFiles(String xmlMessage) 
     {
-        filees.setFilees(new ArrayList<File>());
-        
-        for( String[] file : files ) 
-        {
-            File f = new File();
-            f.setTitle(file[0]);
-            f.setContent(file[1]);
-            filees.getFilees().add(f);
-        }    
+       
+
         
          try {
-             sendJMSFiles();
+             sendJMSFiles(xmlMessage);
          } catch (JAXBException ex) {
              Logger.getLogger(DecryptServiceBean.class.getName()).log(Level.SEVERE, null, ex);
          }
+         
         return true;
-    
+        
     }
     
     
@@ -76,51 +73,26 @@ public class DecryptServiceBean implements DecryptServiceEndPointInterface  {
     /*
     * methode pour la jms queux
     */
-        private void sendJMSFiles () throws JAXBException{
+        private void sendJMSFiles (String message) throws JAXBException{
 
-            
-       
-            JAXBContext jaxbContext;
-     
-            //obtention d'une instance JAXBContext associée au type Payment annoté avec JAX-B
-            jaxbContext = JAXBContext.newInstance(Filees.class);
+   
+            /*
+             // genere tous apartir de la classe
+            JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
             //création d'un Marshaller pour transfomer l'objet Java en flux XML
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-            
             StringWriter writer = new StringWriter();
             
             //transformation de l'objet en flux XML stocké dans un Writer
-            jaxbMarshaller.marshal(filees, writer);
-            
-            
-            
+            jaxbMarshaller.marshal(fichier, writer);
             String xmlMessage = writer.toString();
             //affichage du XML dans la console de sortie
-            System.out.println(xmlMessage);
-          
-           
+            System.out.println(xmlMessage);*/
             
-
-            TextMessage msg = context.createTextMessage(xmlMessage);
+            //encapsulation du paiement au format XML dans un objet javax.jms.TextMessage
+            TextMessage msg = context.createTextMessage(xml);
             
-             unMarshalingExample(xmlMessage);
-            
-            //envoi du message dans la queue paymentQueue
             context.createProducer().send(paymentQueue, msg);
+
     }
-
-    private void unMarshalingExample(String xmlMessage) throws JAXBException 
-    {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Filees.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        StringReader reader = new StringReader(xmlMessage);
-        System.out.print(xmlMessage);
-            
-        Filees emps = (Filees) jaxbUnmarshaller.unmarshal(reader);
-        
-        emps.getFilees();       
-        
-    }
-
-
 }

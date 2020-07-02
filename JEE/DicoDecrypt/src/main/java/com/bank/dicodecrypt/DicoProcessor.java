@@ -1,8 +1,10 @@
 package com.bank.dicodecrypt;
 
+import com.bank.unmarshaller.File;
 import com.bank.unmarshaller.Filees;
-
 import java.io.StringReader;
+import java.io.StringWriter;
+
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.jms.Message;
@@ -11,7 +13,14 @@ import javax.jms.TextMessage;
 import javax.jms.BytesMessage;
 import javax.jms.JMSException;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -35,6 +44,7 @@ public class DicoProcessor implements MessageListener {
     
     @Override
     public void onMessage(Message message) {
+
         try {
 
             if (message instanceof BytesMessage) {
@@ -54,7 +64,7 @@ public class DicoProcessor implements MessageListener {
             System.out.print("Message received {}" + text);
             
             try{
-                unMarshalingExample(text);
+                unMarshaling(text);
             }
 
             catch (JAXBException ex ) {
@@ -81,24 +91,41 @@ public class DicoProcessor implements MessageListener {
 		else {
 		System.out.println("C'est lose");	
 		return false;
-
-		}
 	}
+}
 
 
-    private void unMarshalingExample(String xmlMessage) throws JAXBException 
+    private void unMarshaling(String xmlMessage) throws JAXBException 
     {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Filees.class);
+        JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        StringReader reader = new StringReader(xmlMessage);            
-        Filees emps = (Filees) jaxbUnmarshaller.unmarshal(reader);
-        
-        emps.getFilees();
-        for(int i=0; i < emps.getFilees().size(); i++) {
-            checkTaux(emps.getFilees().get(i).getContent());
 
-        }       
+        StringReader reader = new StringReader(xmlMessage);            
+        File emps = (File) jaxbUnmarshaller.unmarshal(reader);
+        
+
+        checkTaux(emps.getContent());
+
+        byte[] decodedBytes = Base64.getDecoder().decode(emps.getContent());
+        String decodedString = new String(decodedBytes);
+        emps.setContent(decodedString);
+        System.out.print(emps.getContent());
+        
     }
+    
+    private String Marshaling(File file) throws JAXBException 
+    {
+             JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
+            //création d'un Marshaller pour transfomer l'objet Java en flux XML
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            StringWriter writer = new StringWriter();
+            
+            //transformation de l'objet en flux XML stocké dans un Writer
+            jaxbMarshaller.marshal(file, writer);
+            String xmlMessage = writer.toString();
+            return xmlMessage;
+    }
+
 }
     
 
