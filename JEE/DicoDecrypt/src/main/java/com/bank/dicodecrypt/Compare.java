@@ -11,6 +11,7 @@ import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+
 ;
 /**
  *
@@ -31,7 +32,6 @@ public class Compare {
 		String line;
 		BufferedReader bufferedreader = null;
 		FileReader filereader = null;
-		System.out.println(filename);
 		try {
 			filereader = new FileReader(filename);
 			bufferedreader = new BufferedReader(filereader);
@@ -47,6 +47,8 @@ public class Compare {
 	}
 
 	public Double Comparaison(String Text, List<String> mots) {
+              //  System.out.println(Text);
+		//System.out.println(mots);
 		Double taux = 0.0;
 		this.nombreDeMots = 0;
 		this.wordArrayList.clear();

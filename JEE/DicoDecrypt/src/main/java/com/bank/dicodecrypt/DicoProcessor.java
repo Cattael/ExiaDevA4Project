@@ -1,5 +1,8 @@
 package com.bank.dicodecrypt;
 
+import com.bank.unmarshaller.Filees;
+
+import java.io.StringReader;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.jms.Message;
@@ -10,6 +13,10 @@ import javax.jms.JMSException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+
 
 @MessageDriven(activationConfig = {
     @ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "jms/dicoQueue"),
@@ -17,13 +24,14 @@ import java.util.List;
 })
 
 public class DicoProcessor implements MessageListener {
-    	private static final String FILENAME1 = "E:\\Albatros.txt";
-	private static final String FILENAME2 = "E:\\Random.txt";
-	private static final String FILENAME3 = "E:\\Secret.txt";
 
 	private List<String> mots =  new ArrayList<String>() ;
-    public DicoProcessor() {
-    }
+        private String receivedText;
+    
+
+        public DicoProcessor() {
+        
+        }
     
     @Override
     public void onMessage(Message message) {
@@ -41,22 +49,31 @@ public class DicoProcessor implements MessageListener {
             TextMessage textMessage = (TextMessage) message;
             String text = textMessage.getText();
             ConnectDB database = new ConnectDB();
-            this.mots = database.getListMot();
-            checkTaux();
+            this.mots = database.getMots();
+
             System.out.print("Message received {}" + text);
+            
+            try{
+                unMarshalingExample(text);
             }
 
-               } catch (JMSException jmsEx) {
+            catch (JAXBException ex ) {
+                ex.printStackTrace();
+            }
+            
+
+               }} catch (JMSException jmsEx) {
             jmsEx.printStackTrace();
             }
        
     }
 
 
-            public boolean checkTaux() {
+            public boolean checkTaux(String txt) {
 		double tauxReference = 50.0;
 		Compare compare = new Compare();
-		double compared = compare.Comparaison(compare.Reader(FILENAME2), mots);
+		double compared = compare.Comparaison(txt, mots);
+                System.out.println(txt);
 		if(compared > tauxReference) {
 		  System.out.println("C'est Win");
 		  return true;
@@ -73,16 +90,14 @@ public class DicoProcessor implements MessageListener {
     {
         JAXBContext jaxbContext = JAXBContext.newInstance(Filees.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        StringReader reader = new StringReader(xmlMessage);
-        System.out.print(xmlMessage);
-            
+        StringReader reader = new StringReader(xmlMessage);            
         Filees emps = (Filees) jaxbUnmarshaller.unmarshal(reader);
         
         emps.getFilees();
-        
-        
-        System.out.print(emps.getFilees().get(0).getContent());
-        
+        for(int i=0; i < emps.getFilees().size(); i++) {
+            checkTaux(emps.getFilees().get(i).getContent());
+
+        }       
     }
 }
     

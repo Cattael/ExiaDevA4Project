@@ -118,10 +118,7 @@ public class DecryptServiceBean implements DecryptServiceEndPointInterface  {
             
         Filees emps = (Filees) jaxbUnmarshaller.unmarshal(reader);
         
-        emps.getFilees();
-        
-        
-        System.out.print(emps.getFilees().get(0).getContent());
+        emps.getFilees();       
         
     }
 
