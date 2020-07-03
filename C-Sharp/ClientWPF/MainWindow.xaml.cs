@@ -29,12 +29,31 @@ namespace ClientWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            controler.Connect(loginTextBox.Text, passwordTextBox.Text);
+            Connect();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             controler.CheckAuthentication();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Key.Enter == e.Key)
+            {
+                Connect();
+            }
+        }
+
+        private void Connect()
+        {
+            controler.Connect(loginTextBox.Text, passwordTextBox.Text);
+            if (controler.CheckAuthentication())
+            {
+                BrutforceWindow bf = new BrutforceWindow(this.controler, this);
+                bf.Show();
+                this.Hide();
+            }
         }
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecrypteServiceInterfaces",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWPF", "ClientWPF\ClientWPF.csproj", "{8291284F-543E-4695-855B-34F538FD989D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReturnFromJava", "ReturnFromJava\ReturnFromJava.csproj", "{341DDB56-E12A-4B0D-9836-A1A03E2F1588}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8291284F-543E-4695-855B-34F538FD989D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8291284F-543E-4695-855B-34F538FD989D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8291284F-543E-4695-855B-34F538FD989D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{341DDB56-E12A-4B0D-9836-A1A03E2F1588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341DDB56-E12A-4B0D-9836-A1A03E2F1588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341DDB56-E12A-4B0D-9836-A1A03E2F1588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341DDB56-E12A-4B0D-9836-A1A03E2F1588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

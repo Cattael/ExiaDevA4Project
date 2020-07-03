@@ -1,0 +1,10 @@
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\bin\Release\DecrypteService.exe.config
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\bin\Release\DecrypteService.exe
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\bin\Release\DecrypteService.pdb
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\bin\Release\DecrypteServiceInterfaces.dll
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\bin\Release\DecrypteServiceInterfaces.pdb
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\obj\Release\DecrypteService.csprojAssemblyReference.cache
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\obj\Release\DecrypteService.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\obj\Release\DecrypteService.csproj.CopyComplete
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\obj\Release\DecrypteService.exe
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteService\obj\Release\DecrypteService.pdb

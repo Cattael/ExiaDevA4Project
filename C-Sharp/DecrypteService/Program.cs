@@ -15,7 +15,8 @@ namespace DecrypteService
         {
             using (ServiceHost host = new ServiceHost(typeof(Server)))
             {
-                BDDConnection.OpenConnection("Server=192.168.56.101;DataBase=ProjetDev;User id=sa;Password=root;");
+                BDDConnection.GetInstance.OpenConnection("Server=192.168.56.101;DataBase=ProjetDev;User id=sa;Password=root;");
+                JavaConnector.init(); 
                 host.Open();
                 Console.WriteLine("Server is open");
                 Console.WriteLine("Press enter to close the Server");
@@ -36,11 +37,31 @@ namespace DecrypteService
                         case "resettokenapp":
                             resetTokenApp();
                             break;
+                        case "sendmail":
+                            sendMail();
+                            break;
                         default:
-                            Console.WriteLine("Need help ? :\n---- \nAddApp\n----\nAddAccount\n----\nResetTokensuser\n----\nResetTokenapp");
+                            Console.WriteLine("Need help ? :\n---- \nAddApp\n----\nAddAccount\n----\nResetTokensuser\n----\nResetTokenapp\n----\nSendMail");
                             break; 
                     }
                 }
+            }
+        }
+
+        private static void sendMail()
+        {
+            Console.Write("To : ");
+            string to = Console.ReadLine();
+            Console.Write("Content : ");
+            string content = Console.ReadLine();
+            try
+            {
+                MailSender.GetInstance.SendMail(to, content);
+                Console.WriteLine("Mail Sended !");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Failed to send the mail : " + ex.Message);
             }
         }
 
@@ -49,7 +70,7 @@ namespace DecrypteService
             Console.Write("Name : ");
             string name = Console.ReadLine();
             DateTime ExperitionDate = DateTime.Now + TimeSpan.FromDays(15);
-            BDDConnection.AddApp(name, ExperitionDate);
+            BDDConnection.GetInstance.AddApp(name, ExperitionDate);
         }
 
         private static void addAccount()
@@ -60,17 +81,17 @@ namespace DecrypteService
             string password = Console.ReadLine(); 
             Console.Write("Email : ");
             string email = Console.ReadLine();
-            BDDConnection.AddAccount(username, password, email); 
+            BDDConnection.GetInstance.AddAccount(username, password, email); 
         }
 
         private static void resetTokensUser()
         {
-            BDDConnection.ResetTokenUser();
+            BDDConnection.GetInstance.ResetTokenUser();
         }
         private static void resetTokenApp()
         {
             Console.Write("Name of the app : ");
-            BDDConnection.ResetTokenApp(Console.ReadLine()); 
+            BDDConnection.GetInstance.ResetTokenApp(Console.ReadLine()); 
         }
     }
 }

@@ -12,8 +12,17 @@ namespace DecrypteServiceInterfaces
     public interface IServer
     {
         [OperationContract]
-        string Connect(string username, string password);
+        User Connect(string username, string password);
         [OperationContract]
-        bool isAuthenticated(string username, string token); 
+        bool isAuthenticated(string token);
+        [OperationContract]
+        string sendFiles(string file, string name, string tokenUser);
+        [OperationContract]
+        void responseFile(string file);
+        [OperationContract]
+        int getPourcentRequest(string token, string tokenRequest);
+        [OperationContract]
+        string[] getTokenRequests(string token, string email);
+
     }
 }

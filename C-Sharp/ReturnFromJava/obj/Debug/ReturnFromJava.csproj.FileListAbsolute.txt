@@ -1,0 +1,10 @@
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\bin\Debug\ReturnFromJava.exe.config
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\bin\Debug\ReturnFromJava.exe
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\bin\Debug\ReturnFromJava.pdb
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\bin\Debug\DecrypteServiceInterfaces.dll
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\bin\Debug\DecrypteServiceInterfaces.pdb
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\obj\Debug\ReturnFromJava.csprojAssemblyReference.cache
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\obj\Debug\ReturnFromJava.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\obj\Debug\ReturnFromJava.csproj.CopyComplete
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\obj\Debug\ReturnFromJava.exe
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\ReturnFromJava\obj\Debug\ReturnFromJava.pdb

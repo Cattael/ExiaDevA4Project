@@ -1,0 +1,6 @@
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteServiceInterfaces\bin\Release\DecrypteServiceInterfaces.dll
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteServiceInterfaces\bin\Release\DecrypteServiceInterfaces.pdb
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteServiceInterfaces\obj\Release\DecrypteServiceInterfaces.csprojAssemblyReference.cache
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteServiceInterfaces\obj\Release\DecrypteServiceInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteServiceInterfaces\obj\Release\DecrypteServiceInterfaces.dll
+C:\Users\nicol\Desktop\ExiaDevA4Project\C-Sharp\DecrypteServiceInterfaces\obj\Release\DecrypteServiceInterfaces.pdb

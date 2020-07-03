@@ -8,10 +8,4 @@ using System.Windows;
 
 namespace ClientWPF
 {
-    /// <summary>
-    /// Logique d'interaction pour App.xaml
-    /// </summary>
-    public partial class App : Application
-    {
-    }
 }
